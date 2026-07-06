@@ -14,7 +14,7 @@ This repository follows specific safety and operational rules for coding agents.
 5.  **Defensive Mission**: Preserve the project's focus on defensive safety and developer education.
 6.  **No Offensive Material**: Never add exploit steps, attack instructions, bypass methods, credential theft methods, weaponized payloads, evasion instructions, or other offensive operational details.
 7.  **Fact-Checking**: Never publish unverified claims as facts.
-8.  **Data Separation**: Keep candidate and review data (e.g., `data/*.example.json`, `data/manual-intake.json`) separate from published card data (`data/threats.json`).
+8.  **Data Separation**: Keep candidate and review data (e.g., `data/*.example.json`, `data/manual-intake.json`) separate from published card data (`data/threats.json` and `data/threats-approved.json`).
 9.  **No Auto-Publishing**: Never implement logic that automatically publishes candidate content to the public site.
 10. **Semantic Preservation**: Preserve source links and confidence/freshness/severity semantics when modifying data or related logic.
 
