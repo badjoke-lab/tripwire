@@ -1,7 +1,7 @@
 # Before You Run Current Status
 
 Status: public project status  
-Last updated: 2026-05-29
+Last updated: 2026-07-06
 
 ---
 
@@ -98,5 +98,5 @@ Before You Run should not publish detailed harmful instructions, private plannin
 ## Next technical step
 
 ```text
-Refine Phase 2 candidate collection and manual review workflows
+Make the public Cards pages data-driven from the current published card data sources, with English and Japanese surfaces kept aligned.
 ```
