@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../../styles/utilities.css" />
 
 <script src="../../app.js" defer></script>
+<script src="../../timezone-layout.js" defer></script>
 </head>
 <body>
 
@@ -25,6 +26,7 @@
 <ul class="nav-list cluster" role="list">
 <li><a href="/ja/">ホーム</a></li>
 <li><a href="/ja/cards/" aria-current="page">カード</a></li>
+<li><a href="/ja/categories/">カテゴリ</a></li>
 <li><a href="/ja/checklists.html">チェックリスト</a></li>
 <li><a href="/ja/commands.html">コマンド</a></li>
 <li><a href="/ja/after-incident.html">事後対応</a></li>
@@ -44,20 +46,33 @@
 <p>よくある危険状況向けの短い防御ガイドです。</p>
 </section>
 
-<section class="panel flow">
-<h2>不明なリポジトリ</h2>
-<p>実行前に scripts・更新履歴・公開元を確認します。</p>
+<section class="display-settings" aria-label="表示設定" data-timezone-controls></section>
+
+<section class="panel flow" aria-labelledby="card-controls-title-ja">
+  <div class="section-heading">
+    <div>
+      <p class="badge">絞り込み</p>
+      <h2 id="card-controls-title-ja">危険行動カードを探す</h2>
+    </div>
+    <p class="section-note">公開済みのカードデータを検索・絞り込みできます。</p>
+  </div>
+
+  <form class="filter-panel" data-card-controls>
+    <label>検索 <input type="search" data-card-search placeholder="カードを検索..." /></label>
+    <label>カテゴリ <select data-card-category></select></label>
+    <label>重要度 <select data-card-severity></select></label>
+    <label>対象読者 <select data-card-audience></select></label>
+    <label>ソース種別 <select data-card-source-type></select></label>
+    <button type="button" data-card-reset>絞り込みをリセット</button>
+  </form>
+
+  <p class="result-count" data-card-count></p>
 </section>
 
-<section class="panel flow">
-<h2>パッケージ install scripts</h2>
-<p>依存導入前に install hooks を確認します。</p>
-</section>
+<div id="card-list" class="card-grid" data-card-list></div>
+<p class="empty-state" data-card-empty hidden>カードデータを読み込めませんでした。</p>
 
-<section class="panel flow">
-<h2>認証情報漏えい</h2>
-<p>公開したトークンは早めにローテーションします。</p>
-</section>
+<section class="panel flow" data-card-detail hidden></section>
 
 </div>
 </main>

@@ -86,7 +86,7 @@
   const els = { search: controls.querySelector("[data-card-search]"), category: controls.querySelector("[data-card-category]"), severity: controls.querySelector("[data-card-severity]"), audience: controls.querySelector("[data-card-audience]"), sourceType: controls.querySelector("[data-card-source-type]"), reset: controls.querySelector("[data-card-reset]"), count: document.querySelector("[data-card-count]"), timezone: null };
   const state = { cards: [], filtered: [], categoryLabels: new Map(), timezone: readTimezonePreference() };
 
-  const dataPath = (path) => new URL(isJapanese ? `../${path}` : path, window.location.href);
+  const dataPath = (path) => new URL(path, document.currentScript.src);
   const textFor = (card, key) => (isJapanese ? card[`${key}_ja`] || card[key] : card[key]) || "";
   const listFor = (card, key) => (Array.isArray(card[key]) ? card[key] : []).map((x) => String(x));
   const normalize = (value) => String(value || "").toLowerCase();

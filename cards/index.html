@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../styles/utilities.css" />
 
 <script src="../app.js" defer></script>
+<script src="../timezone-layout.js" defer></script>
 </head>
 <body>
 
@@ -45,20 +46,33 @@
 <p>Short defensive guidance cards for common risky situations.</p>
 </section>
 
-<section class="panel flow">
-<h2>Unknown Repository</h2>
-<p>Review scripts, commit history, and maintainer reputation before execution.</p>
+<section class="display-settings" aria-label="Display settings" data-timezone-controls></section>
+
+<section class="panel flow" aria-labelledby="card-controls-title">
+  <div class="section-heading">
+    <div>
+      <p class="badge">Explore</p>
+      <h2 id="card-controls-title">Find risky-action cards</h2>
+    </div>
+    <p class="section-note">Search and filter the published card data.</p>
+  </div>
+
+  <form class="filter-panel" data-card-controls>
+    <label>Search <input type="search" data-card-search placeholder="Search cards..." /></label>
+    <label>Category <select data-card-category></select></label>
+    <label>Severity <select data-card-severity></select></label>
+    <label>Audience <select data-card-audience></select></label>
+    <label>Source type <select data-card-source-type></select></label>
+    <button type="button" data-card-reset>Reset filters</button>
+  </form>
+
+  <p class="result-count" data-card-count></p>
 </section>
 
-<section class="panel flow">
-<h2>Package Install Scripts</h2>
-<p>Inspect install hooks before running dependency setup commands.</p>
-</section>
+<div id="card-list" class="card-grid" data-card-list></div>
+<p class="empty-state" data-card-empty hidden>Card data is not available yet.</p>
 
-<section class="panel flow">
-<h2>Credential Exposure</h2>
-<p>Rotate exposed tokens quickly and review recent usage logs.</p>
-</section>
+<section class="panel flow" data-card-detail hidden></section>
 
 </div>
 </main>
