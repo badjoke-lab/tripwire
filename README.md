@@ -27,6 +27,8 @@ The v0.1 MVP provides:
 - Japanese /ja/ page
 - Risky-action card list
 - Card detail view
+- Category pages
+- AI safety rules page
 - Search and filters
 - Source URL display
 - Source type display

@@ -51,7 +51,9 @@ v0.1 release preparation
 - Screenshot/manual evidence flow
 - Signal verification queue
 - Category safety packs foundation
+- Category pages
 - Downloadable AI rules foundation
+- AI safety rules page
 - AGENTS.md / Cursor bundle foundation
 - AI-output validation report
 - AI-output docs/index
@@ -96,5 +98,5 @@ Before You Run should not publish detailed harmful instructions, private plannin
 ## Next technical step
 
 ```text
-PR-36: Add category pages
+Refine Phase 2 candidate collection and manual review workflows
 ```
